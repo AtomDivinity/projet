@@ -2,27 +2,27 @@ const express = require('express');
 const router = express.Router();
 
 //Consulter la liste des exercices
-router.get ('/exercices', (req, res) => {
+router.get ('/', (req, res) => {
     res.render('index');
 });
 
 //Consulter le detail un exercice 
-router.get('/exercices/:id', (req, res) => {
+router.get('/:id', (req, res) => {
     res.render('index');
 });
 
 //Supprimer un exercice
-router.delete('/exercices/:id', (req, res) => {
+router.delete('/:id', (req, res) => {
     res.render('index');
 });
 
 //Modifier un exercice
-router.put('/exercices/:id', (req, res) => {
+router.put('/:id', (req, res) => {
     res.render('index');
 });
 
 //créer un exercice
-router.post('/exercices', (req, res) => {
+router.post('/', (req, res) => {
     res.render('index');
 });
 

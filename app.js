@@ -18,9 +18,9 @@ app.set('view engine', 'ejs');
 
 
 //Routes imports
-app.use('/utilisateursRoute', utilisateursRoute);
-app.use('/exercicesRoute', exercicesRoute);
-app.use('/programmesRoute', programmesRoute);
+app.use('/utilisateurs', utilisateursRoute);
+app.use('/exercices', exercicesRoute);
+app.use('/programmes', programmesRoute);
 
 app.get('/', (req, res) => {
     res.render('index');
