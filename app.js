@@ -10,16 +10,17 @@ const programmesRoute = require('./routes/programmesRoute');
 
 const port = 3000;
 
+// Dossier des assets
+app.use('/public', express.static('public'));
 
 app.set('views', './views');
 app.set('view engine', 'ejs');
 
-// Dossier des assets
-app.use('/public', express.static('public'));
 
-app.use(utilisateursRoute);
-app.use(exercicesRoute);
-app.use(programmesRoute);
+//Routes imports
+app.use('/utilisateursRoute', utilisateursRoute);
+app.use('/exercicesRoute', exercicesRoute);
+app.use('/programmesRoute', programmesRoute);
 
 app.get('/', (req, res) => {
     res.render('index');
